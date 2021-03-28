@@ -16,6 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    pthread_t tid[5];
 
 public slots:
     void updateInterface(int,int,int);

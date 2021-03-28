@@ -59,6 +59,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
 /*
  * Ao clicar, trens começam execução
  */
@@ -86,24 +87,49 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_veloControlTrem1_valueChanged(int value)
 {
     trem1->setVelocidade(value);
+    if(value==0){
+        trem1->terminate();
+        return;
+    }
+    trem1->start();
 }
 
 void MainWindow::on_veloControlTrem2_valueChanged(int value)
 {
     trem2->setVelocidade(value);
+    if(value==0){
+        trem2->terminate();
+        return;
+    }
+    trem2->start();
 }
 
 void MainWindow::on_veloControlTrem3_valueChanged(int value)
 {
     trem3->setVelocidade(value);
+    if(value==0){
+        trem3->terminate();
+        return;
+    }
+    trem3->start();
 }
 
 void MainWindow::on_veloControlTrem4_valueChanged(int value)
 {
     trem4->setVelocidade(value);
+    if(value==0){
+        trem4->terminate();
+        return;
+    }
+    trem4->start();
 }
 
 void MainWindow::on_veloControlTrem5_valueChanged(int value)
 {
     trem5->setVelocidade(value);
+    if(value==0){
+        trem5->terminate();
+        return;
+    }
+    trem5->start();
 }
